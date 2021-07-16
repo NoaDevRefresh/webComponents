@@ -1,0 +1,15 @@
+{
+  "name": "profilecard",
+  "version": "1.0.0",
+  "description": "Profile card component",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "components"
+  ],
+  "author": "noadevrefresh",
+  "license": "ISC"
+}
