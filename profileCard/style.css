@@ -2,8 +2,12 @@
     --dark-cyan: hsl(185, 75%, 39%);
     --very-dark-des-blue: hsl(229, 23%, 23%);
     --dark-greyish-blue: hsl(227, 10%, 46%);
-
+    --width-mobile: 375px;
+    --width-screen: 1440px;
     --dark-gray: hsl(0, 0%, 59%);
+}
+@media screen {
+  
 }
 
 *{
@@ -14,6 +18,7 @@
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 18px;
+    background: var(--dark-cyan);
 }
   
   main {
@@ -22,8 +27,11 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: var(--dark-cyan);
-  }
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position-y: top -70vh, bottom -85vh;
+    background-position-x: right 50vw, left 50vw;
+}
 
 .card{
   display:flex;
@@ -33,30 +41,9 @@
   flex-direction: column;
 }
 
-.card p{
+p{
   margin: 10px auto;
-}
-
-.card__body > p:first-child{
-  margin-top: 60px;
-  margin-bottom: 3px;
-}
-
-.card > div{
-  padding: 20px;
-}
-
-.card__header{
-  background: url('./images/bg-pattern-card.svg');
-  border-radius: 15px 15px 0 0;
-  min-height: 106px;
-}
-
-.card__header__img{
-  border-radius:50%;
-  border: solid 5px white;
-  position: absolute;
-  transform: translate3d(-50%, 33%, 0);
+  font-weight: 400;
 }
 
 .card__body{
@@ -64,31 +51,49 @@
   flex-direction: column;
   background: white;
 }
+.card__body > p:first-child{
+  margin-top: 60px;
+  margin-bottom: 3px;
+}
+.card__header{
+  background: url('./images/bg-pattern-card.svg');
+  border-radius: 15px 15px 0 0;
+  min-height: 106px;
+}
 
-.card__body--name{
+.card > div{
+  padding: 20px;
+}
+
+.img{
+  border-radius:50%;
+  border: solid 5px white;
+  position: absolute;
+  transform: translate3d(-50%, 33%, 0);
+}
+
+.title{
   font-weight: 700;
 }
 
-.card__body--age{
+.age{
   color: var(--dark-greyish-blue);
 }
 
-.card__body--city{
+.label{
   color: var(--dark-gray);
+}
+
+.label .city{
   font-size: 0.8em;
 }
 
-.card__footer__label{
-  color: var(--dark-gray);
+.stats__label{
   font-size: 0.6em;
   letter-spacing: 2px;
 }
 
-.card__body__p{
-  margin: 10px;
-}
-
-.card__footer{
+.stats{
   display: flex;
   justify-content: space-around;
   border-radius: 0 0 15px 15px;
@@ -96,10 +101,6 @@
   box-shadow: 0 -1px 0 0 rgb(232, 230, 230);
 }
 
-.card__footer__section{
+.stats__section{
   flex-direction: row;
-}
-
-.card__footer__title{
-  font-weight: 700;
 }
