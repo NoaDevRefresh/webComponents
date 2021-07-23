@@ -29,9 +29,9 @@
     align-items: center;
     background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position-y: top -70vh, bottom -85vh;
-    background-position-x: right 50vw, left 50vw;
-}
+    background-size: auto;
+    background-position: right 50vw top -70vh, left 50vw bottom -85vh;
+  }
 
 .card{
   display:flex;

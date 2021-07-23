@@ -14,9 +14,10 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
+
+This is a nice simple design of a profile card. I'm going to use BEM naming for the project and pure HTML and CSS. I think it is perfect to practice the basis before going up on complexity.
 
 ### The challenge
 
@@ -30,71 +31,50 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/NoaDevRefresh/webComponents/tree/main/profileCard](Solution)
+- Live Site URL: [https://noadevrefresh.github.io/webComponents/profileCard/](LiveSite)
 
 ## My process
+
+1. First I took decisions on tools and stacks I was using for the challenge
+2. Next I programmed the layout with HTML, trying to keep semantics and encapsulation.
+3. I added the styles following mobile first.
+4. I refactor and optimize if possible.
+5. I tested the design on Firefox and Chrome.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I relearned about flexbox and viewport units. Even though I had worked with them before I had to research and relearn to get the background exactly on the right spot. Besides I wanted it to be perfectly adaptative, so I used viewport units and got it to work fine and without media queries.
 
-To see how you can add code snippets, see below:
+I'm specially proud of this:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position-y: top -70vh, bottom -85vh;
+    background-position-x: right 50vw, left 50vw;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'm actually learning about preprocessors and I'm looking forward working with them and being able to apply what I'm learning on my next challenge. I think this will make a difference in optimization on my code.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I decided to work on this challenge first because it seemed to be easy enough to try Frontend Mentor out and see how the process works. I have to say that I liked working on it and I'm looking forward to work on more challenging designs on the future.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
+- [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://www.css-tricks.com) - Like every time I need flexbox this site saved me dearly.
+- [https://css-tricks.com/fun-viewport-units/](https://www.css-tricks.com) - And also came on hand for the use of viewport units
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [https://github.com/NoaDevRefresh](myGithubSite )
+- Frontend Mentor - [@NoaDevRefresh](https://www.frontendmentor.io/profile/NoaDevRefresh)
+- Twitter - [@dev_noa](https://www.twitter.com/dev_noa)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
