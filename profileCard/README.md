@@ -31,8 +31,8 @@ This is a nice simple design of a profile card. I'm going to use BEM naming for 
 
 ### Links
 
-- Solution URL: [https://github.com/NoaDevRefresh/webComponents/tree/main/profileCard](Solution)
-- Live Site URL: [https://noadevrefresh.github.io/webComponents/profileCard/](LiveSite)
+- Solution URL: [https://github.com/NoaDevRefresh/webComponents/tree/main/profileCard]
+- Live Site URL: [https://noadevrefresh.github.io/webComponents/profileCard/]
 
 ## My process
 
