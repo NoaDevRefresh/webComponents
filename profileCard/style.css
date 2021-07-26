@@ -39,6 +39,7 @@
   text-align: center;
   align-items: stretch;
   flex-direction: column;
+  position: relative;
 }
 
 p{
@@ -52,31 +53,34 @@ p{
   background: white;
 }
 .card__body > p:first-child{
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 3px;
 }
+
 .card__header{
   background: url('./images/bg-pattern-card.svg');
   border-radius: 15px 15px 0 0;
-  min-height: 106px;
+  min-height: 130px;
+  height:100%;
 }
 
 .card > div{
-  padding: 20px;
+  padding: 10px;
+  height: 35%;
 }
 
 .img{
   border-radius:50%;
   border: solid 5px white;
   position: absolute;
-  transform: translate3d(-50%, 33%, 0);
+  transform: translate3d(-50%, 60%, 0);
 }
 
-.title{
+.card__title{
   font-weight: 700;
 }
 
-.age{
+.card__age{
   color: var(--dark-greyish-blue);
 }
 
@@ -84,16 +88,16 @@ p{
   color: var(--dark-gray);
 }
 
-.label .city{
+.label .card__city{
   font-size: 0.8em;
 }
 
-.stats__label{
+.card__stats__label{
   font-size: 0.6em;
   letter-spacing: 2px;
 }
 
-.stats{
+.card__stats{
   display: flex;
   justify-content: space-around;
   border-radius: 0 0 15px 15px;
