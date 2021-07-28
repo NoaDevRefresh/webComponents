@@ -23,42 +23,50 @@
   <body>
     <header>
       <section class="top-bar">
-        <div class="logo title top-bar__logo">Sunnyside</div>
-        <nav class="menu top-bar__menu">
-          <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact</li>
+        <div class="top-bar__logo">
+          <img class="logo" src="./images/logo.svg" />
+        </div>
+        <nav class="top-bar__menu">
+          <ul class="menu">
+            <a href="#" class="active"><li>About</li></a>
+            <a href="#"><li>Services</li></a>
+            <a href="#"><li>Projects</li></a>
+            <a href="#"><li>Contact</li></a>
           </ul>
+          <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+          </a>
         </nav>
       </section>
       <section class="front">
-        <h1 class="title front__title">We are creatives</h1>
+        <h1 class="title front__title">WE ARE CREATIVES</h1>
         <div class="front__arrow"></div>
       </section>
     </header>
     <main>
       <section class="assets">
-        <article class="asset asset__img"></article>
-        <article class="asset asset__link">
+        <article class="asset asset__img">
+          <img src="./images/mobile/image-transform.jpg" />
+        </article>
+        <article class="asset asset__learn">
           <h2 class="title">Transform your brand</h2>
           <p>
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
           </p>
-          <a>Learn more</a>
+          <a class="asset__link">  Learn more  </a>
         </article>
-        <article class="asset asset__img"></article>
-        <article class="asset asset__link">
-          <h2>Stand out to the right audience</h2>
+        <article class="asset asset__img">
+          <img src="./images/mobile/image-stand-out.jpg" />
+        </article>
+        <article class="asset asset__learn">
+          <h2 class="title">Stand out to the right audience</h2>
           <p>
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.
           </p>
-          <a>Learn morev</a>
+          <a class="asset__link">Learn more</a>
         </article>
         <article class="asset asset__info">
           <h2 class="title">Graphic design</h2>
@@ -115,15 +123,15 @@
     </main>
     <footer>
       <div class="logo footer__logo"></div>
-      <menu class="menu footer__menu">
-        <ul>
+      <menu class="footer__menu">
+        <ul class="menu">
           <li>About</li>
           <li>Projects</li>
           <li>Contact</li>
         </ul>
       </menu>
       <menu class="footer__social-bar">
-        <ul>
+        <ul class="menu">
           <li></li>
           <li></li>
           <li></li>
@@ -136,7 +144,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Your Name Here.
     </div>
-  </body>
+  </</a>body>
 </html>
