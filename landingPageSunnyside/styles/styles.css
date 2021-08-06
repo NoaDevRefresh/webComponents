@@ -40,7 +40,7 @@ header {
 }
 img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 .front {
 	text-align: center;
@@ -173,6 +173,65 @@ img {
 }
 .testimonial__img > img {
 	border-radius: 50px;
+}
+.bottom-gallery{
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+}
+.bottom-gallery figure{
+	margin: 0;
+}
+footer{
+	display: flex;
+	flex-direction: column;
+	background-color: hsl(165, 43.2%, 71%);
+}
+.footer__logo-container{
+	padding: 30px;
+	margin-top: 25px;
+}
+.logo.footer__logo{
+	width: 124px;
+}
+.footer__menu{
+	margin: 0;
+	padding: 0;
+	color: var(--dark-mod-cyan);
+	font-size: 0.8em;
+}
+.footer__menu ul{
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+}
+.footer__social-bar{
+	margin: 50px 0;
+	padding: 30px;
+}
+.footer__social-bar .menu{
+	display: flex;
+	margin: 0 ;
+	padding: 0;
+	justify-content: center;
+}
+.footer__social-bar .menu a{
+	width: 20px;
+	height:20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 10px;
+}
+.facebook{
+	background-image: url(../images/icon-facebook.svg);
+}
+.instagram{
+	background-image: url(../images/icon-instagram.svg);
+}
+.twitter{
+	background-image: url(../images/icon-twitter.svg);
+}
+.pinterest{
+	background-image: url(../images/icon-pinterest.svg);
 }
 .attribution {
 	font-size: 11px;
