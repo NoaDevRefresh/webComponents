@@ -1,0 +1,121 @@
+:root {
+	/** PRIMARY */
+	--soft-red: hsl(7, 99%, 70%);
+	--yellow: hsl(51, 100%, 49%);
+	--dark-des-cyan: hsl(167, 40%, 24%);
+	--dark-blue: hsl(198, 62%, 26%);
+	--dark-mod-cyan: hsl(168, 34%, 41%);
+
+	/** NEUTRAL */
+	--very-dark-des-blue: hsl(212, 27%, 19%);
+	--very-dark-grayish-blue: hsl(213, 9%, 39%);
+	--dark-grayish-blue: hsl(232, 10%, 55%);
+	--grayish-blue: hsl(210, 4%, 67%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+div{
+    width: 100%;
+    height: auto;
+}
+body {
+	margin: 0;
+	font-family: "Barlow", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+a, p{
+    text-decoration: none;
+    color: var(--very-dark-grayish-blue);
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/mobile/image-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.top-bar{
+    height: 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+nav{
+    background: transparent;
+    width: 100%;
+    height: auto;
+    min-height: 24px;
+}
+.top-menu{
+    display: none;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+}
+.icon{
+    width: 24px;
+	height: 24px;
+	display: block;
+}
+.icon-ham{
+	content: "";
+	/*background */
+	background: url("../images/icon-hamburger.svg") no-repeat 0px 0px;
+	background-size: cover;
+    position: absolute;
+    right: 30px;
+}
+.front{
+    min-height: 538px;
+    height: auto;
+    width: 100%;
+    background: transparent;
+}
+
+
+@media (min-width: 600px) {
+    header{
+        background: url('../images/desktop/image-header.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .front{
+        min-height: 750px;
+    }
+    .icon-ham{
+        display: none;
+    }
+    .top-menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .top-menu li{
+        flex: 1;
+    }
+    .top-menu li a{
+        color: var(--white);
+    }
+    .logo-container{
+        display: flex;
+    }
+}
