@@ -17,6 +17,8 @@
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 div{
     width: 100%;
@@ -29,12 +31,17 @@ body {
 	font-weight: 600;
 	text-align: center;
 }
-a, p{
+li{
+    list-style: none;
+}
+p{
     text-decoration: none;
     color: var(--very-dark-grayish-blue);
 }
+a{
+    text-decoration: none;
+}
 .menu{
-    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -57,14 +64,64 @@ header{
     align-items: center;
     padding: 0 30px;
 }
-nav{
+.navbar{
     background: transparent;
     width: 100%;
     height: auto;
     min-height: 24px;
 }
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+}
+.icon-ham span:first-child{
+    margin-top: 0;
+}
 .top-menu{
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 8px 6px -6px var(--grayish-blue);
+}
+.top-menu li{
+    background: var(--white);
+    padding: 10px;
+}
+.top-menu li a{
+    display: block;
+    padding: 20px;
+    width: 50%;
+	height: auto;
+	margin: 0 auto;
+    color: var(--very-dark-grayish-blue);
+}
+.top-menu li:first-child{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    height: 30px;
+    background: transparent;
+    border-right: 30px white solid;
+    border-top: 30px transparent solid;
+}
+.top-menu li:nth-child(2){
+    padding-top: 40px;
+}
+.top-menu li:last-child{
+    padding-bottom: 40px;
+}
+.top-menu__triangle-decoration{
+    width: 100%;
+    height: 50px;
 }
 .logo{
     width: 100%;
@@ -77,22 +134,41 @@ nav{
 	display: block;
 }
 .icon-ham{
-	content: "";
-	/*background */
-	background: url("../images/icon-hamburger.svg") no-repeat 0px 0px;
-	background-size: cover;
     position: absolute;
     right: 30px;
+    cursor: pointer;
 }
+.icon-ham.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.icon-ham.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.icon-ham.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .front{
     min-height: 538px;
     height: auto;
     width: 100%;
     background: transparent;
 }
+.top-menu li a.link-active{
+	background-color: var(--yellow);
+	border-radius: 50px;
+	color: var(--very-dark-des-blue);
+	text-transform: uppercase;
+	font-family: "Fraunces", serif;
+	font-size: 0.8em;
+}
+.menu-active{
+    left: 5%;
+}
 
-
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     header{
         background: url('../images/desktop/image-header.jpg');
         background-size: cover;
@@ -108,14 +184,38 @@ nav{
     .top-menu{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        position:static;
+        flex-direction: row;
+        background-color: transparent;
+        width: 100%;
+        text-align: center;
+        transition:unset;
+        box-shadow:unset
     }
     .top-menu li{
         flex: 1;
+        background: transparent;
+        padding: 0;
     }
     .top-menu li a{
         color: var(--white);
+        width: 100%;
+        height: auto;
     }
     .logo-container{
         display: flex;
+    }
+    .top-menu li:first-child {
+        display: none;
+    }
+    .top-menu li:nth-child(2){
+        padding-top: inherit;
+    }
+    .top-menu li:last-child{
+        padding-bottom: inherit;
+    }
+    .top-menu li a.link-active{
+        background-color: var(--white);
     }
 }
