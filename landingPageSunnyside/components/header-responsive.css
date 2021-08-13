@@ -46,15 +46,19 @@ a{
     margin: 0;
     display: flex;
 }
+.title{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
 header{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     background: url('../images/mobile/image-header.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
   }
 .top-bar{
     height: 100px;
@@ -62,7 +66,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
 }
 .navbar{
     background: transparent;
@@ -151,10 +154,31 @@ header{
 }
 
 .front{
-    min-height: 538px;
+    min-height: 440px;
     height: auto;
     width: 100%;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+.front__title{
+    flex: 1;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 1.1em;
+    letter-spacing: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.front__title h1{
+    letter-spacing: 7px;
+}
+.front__arrow{
+    flex: 2;
+}
+.front__arrow img{
+    padding-top: 20px;
 }
 .top-menu li a.link-active{
 	background-color: var(--yellow);
@@ -171,12 +195,12 @@ header{
 @media (min-width: 768px) {
     header{
         background: url('../images/desktop/image-header.jpg');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top;
     }
     .front{
-        min-height: 750px;
+        min-height: 700px;
     }
     .icon-ham{
         display: none;
@@ -205,6 +229,7 @@ header{
     }
     .logo-container{
         display: flex;
+        padding-left: 25px;
     }
     .top-menu li:first-child {
         display: none;

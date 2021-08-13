@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/testimonials.css" type="text/css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Fraunces:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+
+<body>
+    <section id="testimonials-section" class="testimonials-section">
+        <h2 class="title">CLIENT TESTIMONIALS</h2>
+        <article class="testimonial-item">
+            <div class="testimonial-img first-of-class">
+            </div>
+            <p class="plain-text">
+                We put our trust in Sunnyside and they delivered, making sure our
+                needs were met and deadlines were always hit.
+            </p>
+            <p class="title name">Emily R.</p>
+            <p class="label">Marketing Director</p>
+        </article>
+        <article class="testimonial-item">
+            <div class="testimonial-img">
+            </div>
+            <p class="plain-text">
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <p class="title name">Thomas S.</p>
+            <p class="label">Chief Operating Officer</p>
+        </article>
+        <article class="testimonial-item">
+            <div class="testimonial-img last-of-class">
+            </div>
+            <p class="plain-text">
+                Incredible end result! Our sales increased over 400% when we worked
+                with Sunnyside. Highly recommended!
+            </p>
+            <p class="title name">Jennie F.</p>
+            <p class="label">Business Owner</p>
+        </article>
+    </section>
+
+    <script>
+        const menuNav = document.querySelector('.top-menu');
+        const menuNavButton = document.querySelector('.icon-ham');
+        const menuNavLinks = document.querySelectorAll('.top-bar-link');
+        menuNavButton.addEventListener('click', openMenuNav);
+        menuNavLinks.forEach(link => {
+            link.addEventListener('click', menuNavActive);
+        })
+        function openMenuNav() {
+            menuNav.classList.toggle("menu-active");
+            menuNavButton.classList.toggle("active");
+        }
+        function menuNavActive() {
+            const linkActive = document.querySelector('.link-active')
+            if (this.id !== linkActive.id) {
+                this.classList.add('link-active');
+                linkActive.classList.remove('link-active');
+            }
+        }
+    </script>
+</body>
+
+</html>

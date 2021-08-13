@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/above.css" type="text/css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Fraunces:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+
+<body>
+    <section id="above-section" class="above-section">
+        <article class="above-item above-img first-of-class">
+        </article>
+        <article class="above-item above-text">
+            <h2 class="title">Transform your brand</h2>
+            <p>
+                We are a full-service creative agency specializing in helping brands
+                grow fast. Engage your clients through compelling visuals that do
+                most of the marketing for you.
+            </p>
+            <div class="underline-deco shadow-yellow"><a class="title">LEARN MORE</a></div>
+        </article>
+        <article class="above-item above-img last-of-class">
+        </article>
+        <article class="above-item above-text">
+            <h2 class="title">Stand out to the right audience</h2>
+            <p>
+                Using a collaborative formula of designers, researchers,
+                photographers, videographers, and copywriters, we’ll build and
+                extend your brand in digital places.
+            </p>
+            <div class="underline-deco shadow-red"><a class="title">LEARN MORE</a></div>
+        </article>
+    </section>
+    <section id="services-section" class="services-section">
+        <article class="services-item">
+            <h2 class="title">Graphic design</h2>
+            <p class="text-dark-des-cyan">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+            </p>
+        </article>
+        <article class="services-item">
+            <h2 class="title">Photography</h2>
+            <p class="text-dark-blue">
+                Increase your credibility by getting the most stunning, high-quality
+                photos that improve your business image.
+            </p>
+        </article>
+    </section>
+    <script>
+        const menuNav = document.querySelector('.top-menu');
+        const menuNavButton = document.querySelector('.icon-ham');
+        const menuNavLinks = document.querySelectorAll('.top-bar-link');
+        menuNavButton.addEventListener('click', openMenuNav);
+        menuNavLinks.forEach(link => {
+            link.addEventListener('click', menuNavActive);
+        })
+        function openMenuNav() {
+            menuNav.classList.toggle("menu-active");
+            menuNavButton.classList.toggle("active");
+        }
+        function menuNavActive() {
+            const linkActive = document.querySelector('.link-active')
+            if (this.id !== linkActive.id) {
+                this.classList.add('link-active');
+                linkActive.classList.remove('link-active');
+            }
+        }
+    </script>
+</body>
+
+</html>
